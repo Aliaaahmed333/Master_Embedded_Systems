@@ -1,0 +1,40 @@
+
+
+/*
+  File_Name startup.s_cortexm3
+  ENG : Aliaa Ahmed
+  Date : 1/11/2023
+  Time : 06:01 am
+*/
+
+.section .vectors
+
+.word 0x20001000 /* stack top address*/
+.word _reset     /* 1 Reset*/
+.word Vector_handler   /* 2 NMI */
+.word Vector_handler   /* 3 Hard Fault */
+.word Vector_handler   /* 4 NM Fault */
+.word Vector_handler   /* 5 Bus Fault */
+.word Vector_handler   /* 6 Usage Fault*/
+.word Vector_handler   /* 7 Reserved */
+.word Vector_handler   /* 8 Reserved */
+.word Vector_handler   /* 9 Reserved */
+.word Vector_handler   /* 10 Reserved */
+.word Vector_handler   /* 11 SV call*/
+.word Vector_handler   /* 12 Debug reserved*/
+.word Vector_handler   /* 13 Reserved*/
+.word Vector_handler   /* 14 Pensv*/
+.word Vector_handler   /* 15 SysTick*/
+.word Vector_handler   /* 16 IRQ0*/
+.word Vector_handler   /* 17 IRQ1*/
+.word Vector_handler   /* 18 IRQ2*/
+.word Vector_handler   /* 19 ..*/
+      /* On to IRQ67*/
+	  
+.section .text
+_reset:
+	bl main /* branch on main func and loop on it if i out from main*/
+	b . 
+.thumb_func	
+Vector_handler:
+	b _reset
