@@ -1,8 +1,8 @@
 /*
  fileName : startup.c
  ENG : Aliaa Ahmed
- Date : 1/11/2023
- 
+ Date : 9/11/2023
+ we add heap symbolls 
 
 */
 
