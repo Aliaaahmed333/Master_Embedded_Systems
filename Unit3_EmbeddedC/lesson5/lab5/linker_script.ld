@@ -1,8 +1,9 @@
 /*
 linker_script.ld_cortex_m3
  Eng Aliaa Ahmed 
- Date: 1/11/2023
+ Date: 9/11/2023
  TIME 08:13 AM
+we add in this file heap section 
 */
 
 
